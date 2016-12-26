@@ -73,12 +73,13 @@ public class Deck{
 		
 		
 		for(int i=cards.size()-1;i>=0;i--){
+			
 			Random rnd = new Random(); 
 			int rIndex = rnd.nextInt(i+1);
 			
-			Card cTemp = cards.get(i);
-			cards.remove(i);
-			cards.add(rIndex,cTemp);
+			Card cTemp = cards.get(rIndex);
+			cards.remove(rIndex);
+			cards.add(i,cTemp);
 		}
 		
 		openCard.clear();
